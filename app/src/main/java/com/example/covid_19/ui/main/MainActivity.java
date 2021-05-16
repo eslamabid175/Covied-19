@@ -39,26 +39,5 @@ articlViewModel.CountryLiveData.observe(this, new Observer<List<Countries>>() {
     }
 });
 
-
-
-
-
-
-
-
-
-
-
-//
-//
-//        ArrayList<Countries> arrayList=new ArrayList<>();
-//
-//
-//        recyclerView=findViewById(R.id.recyxler_view);
-//
-//        ArticleAdabter adabter=new ArticleAdabter();
-//adabter.setArticlsList(arrayList);
-//        recyclerView.setAdapter(adabter);
-//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 }

@@ -23,7 +23,7 @@ public class CountriesClientRetrofit {
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
 
-        ApiInterface apiInterface=retrofit.create(ApiInterface.class);
+         apiInterface=retrofit.create(ApiInterface.class);
 
     }
 
