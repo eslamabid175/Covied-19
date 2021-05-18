@@ -1,7 +1,9 @@
 package com.example.covid_19.data;
 
 import com.example.covid_19.pojo.Countries;
+import com.example.covid_19.pojo.Model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -36,7 +38,7 @@ instance=new CountriesClientRetrofit();
 
         return instance;
     }
-public Call<List<Countries>>getCountrys(){
+public Call<ArrayList<Countries>>getCountrys(){
 
         return apiInterface.getCountry();
 }

@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.covid_19.R;
 import com.example.covid_19.pojo.Countries;
+import com.example.covid_19.pojo.Model;
 
 import java.util.ArrayList;
 
@@ -20,6 +21,7 @@ public class ArticleAdabter extends RecyclerView.Adapter<ArticleAdabter.AdapterV
     public AdapterViewHolder onCreateViewHolder(@NonNull  ViewGroup parent, int viewType) {
         return new AdapterViewHolder(LayoutInflater.from(parent.getContext()).
                 inflate(R.layout.article_list_item,parent,false));
+
     }
 
     @Override

@@ -2,7 +2,7 @@ package com.example.covid_19.pojo;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Countries {
+public  class Countries {
     @SerializedName("ID")
     private String ID;
     @SerializedName("Country")
@@ -22,14 +22,17 @@ public class Countries {
     @SerializedName("NewRecovered")
     private int NewRecovered;
     @SerializedName("TotalRecovered")
-    private int TotalRecovered ;
+    private int TotalRecovered;
     @SerializedName("Date")
-    private String Date ;
+    private String Date;
     @SerializedName("Premium")
-    private String Premium ;
+    private String Premium;
 
-    public Countries(String ID, String country, String countryCode, String slug, int newConfirmed, int totalConfirmed, int newDeaths,
-                     int totalDeaths, int newRecovered, int totalRecovered, String date, String premium) {
+
+    public Countries(String ID, String country, String
+            countryCode, String slug, int newConfirmed, int totalConfirmed, int newDeaths,
+                     int totalDeaths, int newRecovered,
+                     int totalRecovered, String date, String premium) {
         this.ID = ID;
         Country = country;
         CountryCode = countryCode;

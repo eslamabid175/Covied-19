@@ -11,9 +11,9 @@ import android.os.Bundle;
 
 import com.example.covid_19.R;
 import com.example.covid_19.pojo.Countries;
+import com.example.covid_19.pojo.Model;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 RecyclerView recyclerView;
@@ -25,19 +25,30 @@ ArticlViewModel articlViewModel;
         setContentView(R.layout.activity_main);
         articlViewModel= ViewModelProviders.of(this).get(ArticlViewModel.class);
 articlViewModel.getCountry();
+
 recyclerView=findViewById(R.id.recyxler_view);
 ArticleAdabter adabter=new ArticleAdabter();
+
+articlViewModel.CountryLiveData.observe(this, new Observer<ArrayList<Countries>>() {
+    @Override
+    public void onChanged(ArrayList<Countries> countries) {
+        adabter.setArticlsList(countries);
+    }
+});
 recyclerView.setLayoutManager(new LinearLayoutManager(this));
 recyclerView.setAdapter(adabter);
 
 
-articlViewModel.CountryLiveData.observe(this, new Observer<List<Countries>>() {
-    @Override
-    public void onChanged(List<Countries> countriesList) {
-
-        adabter.setArticlsList((ArrayList<Countries>) countriesList);
-    }
-});
 
     }
 }
+
+
+//
+//new Observer<List<Model>>() {
+//@Override
+//public void onChanged(List<Model> countriesList) {
+//
+//        adabter.setArticlsList((ArrayList<Model>) countriesList);
+//        }
+//        });
